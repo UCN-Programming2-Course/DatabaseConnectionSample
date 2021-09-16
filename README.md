@@ -15,8 +15,8 @@ However, it is sometimes necessary to use mixed mode in cases where a windows au
 First you should enable mixed mode on your SQL Server by following these few steps. 
 
 1.	In Object Explorer right click on the database server and select Properties.
-1.	In the Server Properties dialog select the Security page and ensure that SQL Server and Windows Authentication mode is selected.
-1.	Click OK
+2.	In the Server Properties dialog select the Security page and ensure that SQL Server and Windows Authentication mode is selected.
+3.	Click OK
 
 It is now possible to logon to the SQL Server with both a domain user and credentials created on the server. So, the next step is to create a login on the database server.
 
@@ -30,6 +30,26 @@ The little red cross on the sa login means it is disabled, as it should also be 
 
 The next step is to create a more secure login.
 
-1.	Right click on the Logins folder and select New Login.
+4.	Right click on the Logins folder and select New Login
+5.	In the Login – New dialog on the General page you should write a name for the login, select SQL Server authentication, and provide and confirm the password. You can uncheck the Enforce password policy if you do not want the password to comply. (Since this login is for an application and not a user, I actually recommend unchecking this option. Just make sure your password is long and you should be ok)
 
-1.	In the Login – New dialog on the General page you should write a name for the login, select SQL Server authentication, and provide and confirm the password. You can uncheck the Enforce password policy if you do not want the password to comply. (Since this login is for an application and not a user, I actually recommend unchecking this option. Just make sure your password is long and you should be ok)
+6.	Next, on the User Mapping page you can select which database(s) this login is mapped to and which roles it has. Check the Company database and in the Database role membership for: Company section check the db_datareader and db_datawriter options. This ensures that the user created for the Company database only is allowed to read and manipulate data and not the database schema.
+
+7.	Click OK.
+
+## Create User
+
+If you followed the steps described above, a user is already created for the Company database. You find it by expanding the Company database, the Security folder, and the Users folder. 
+
+You can examine the users’ properties by right clicking it and select Properties, but you do not need to take further actions.
+
+To continue testing the new user, jump to step 13 in this guide.
+
+If you did not make step 6 above a user is not created, but do not despair, you can still create one.
+
+8.	Right click on the Users folder and select New User.
+9.	In the Database User – New dialog go to the General page and make sure that SQL user with login is chosen in the User type combo box. In the User name field enter an username of your own choice. 
+10.	Click on the   button next to the Login name field and in the Select Login dialog box click Browse and check the companyuser. 
+11.	Click OK twice and you are back to the Database User – New dialog that should look something like this:
+
+
