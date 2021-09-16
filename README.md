@@ -15,6 +15,9 @@ However, it is sometimes necessary to use mixed mode in cases where a windows au
 First you should enable mixed mode on your SQL Server by following these few steps. 
 
 1.	In Object Explorer right click on the database server and select Properties.
+
+![alt text](https://github.com/UCN-Programming2-Course/DatabaseConnectionSample/blob/master/graphics/Picture1.png "")
+
 2.	In the Server Properties dialog select the Security page and ensure that SQL Server and Windows Authentication mode is selected.
 3.	Click OK
 
