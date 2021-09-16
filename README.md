@@ -15,11 +15,8 @@ However, it is sometimes necessary to use mixed mode in cases where a windows au
 First you should enable mixed mode on your SQL Server by following these few steps. 
 
 1.	In Object Explorer right click on the database server and select Properties.
-
-![alt text](https://github.com/UCN-Programming2-Course/DatabaseConnectionSample/blob/master/graphics/Picture1.png "Step 1")
-
-3.	In the Server Properties dialog select the Security page and ensure that SQL Server and Windows Authentication mode is selected.
-4.	Click OK
+2.	In the Server Properties dialog select the Security page and ensure that SQL Server and Windows Authentication mode is selected.
+3.	Click OK
 
 It is now possible to logon to the SQL Server with both a domain user and credentials created on the server. So, the next step is to create a login on the database server.
 
