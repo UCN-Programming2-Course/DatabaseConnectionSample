@@ -51,5 +51,11 @@ If you did not make step 6 above a user is not created, but do not despair, you 
 9.	In the Database User – New dialog go to the General page and make sure that SQL user with login is chosen in the User type combo box. In the User name field enter an username of your own choice. 
 10.	Click on the   button next to the Login name field and in the Select Login dialog box click Browse and check the companyuser. 
 11.	Click OK twice and you are back to the Database User – New dialog that should look something like this:
+12.	On the Membership page in the Database User – New dialog check the db_datareader and db_datawriter options and click OK. 
 
+The user is now created and should be visible in the Users folder. You can test it by creating a new connection to the database server in SQL Server Management Studio.
+
+13.	In Object Explorer click on the Connect icon and the Connect to Server dialog appears.
+14.	In the Authentication combo box select SQL Server Authentication and write the username and password for the login.
+15.	Click OK and you are now logged in as the new user.
 
